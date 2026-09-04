@@ -128,10 +128,10 @@ end
 createBouncingItem(false, 1.3)
 createBouncingItem(true, 1.4)
 
--- Spawning loop: Adds more bouncing boxes and text every 1.5 seconds
+-- Spawning loop: Adds more bouncing boxes and text much faster (every 0.35 seconds)
 task.spawn(function()
 	while true do
-		task.wait(1.5)
+		task.wait(0.35)
 		local choice = math.random(1, 2)
 		if choice == 1 then
 			createBouncingItem(false, math.random(110, 160) / 100)
